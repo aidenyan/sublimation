@@ -1,9 +1,9 @@
 package com.jimmy.controller;
 
 import com.jimmy.dto.TreasureInfoDto;
-import com.jimmy.validate.anno.NotEmpty;
-import com.jimmy.validate.anno.NotNull;
-import com.jimmy.validate.anno.ParamValidate;
+import com.jimmy.sublimation.validate.anno.NotEmpty;
+import com.jimmy.sublimation.validate.anno.NotNull;
+import com.jimmy.sublimation.validate.anno.ParamValidate;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Created by Administrator on 2019/5/10/010.
  */
-@Api(value = "test", tags = "TestController", description = "²âÊÔÀàÐÍ")
+@Api(value = "test", tags = "TestController", description = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
 @Controller
 public class TestController {
 
     @PostMapping("/set_info")
     @ResponseBody
-    @ApiOperation("±¦²ØÀàÐÍÐÅÏ¢ÉèÖÃ")
+    @ApiOperation("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½")
     @ParamValidate
     public String set(@NotNull("dsfdsfdssfds") @RequestBody TreasureInfoDto treasureInfoDto) {
         return "set_info";
@@ -31,11 +31,11 @@ public class TestController {
 
     @PostMapping("/send_sms")
     @ResponseBody
-    @ApiOperation("·¢ËÍµÇÂ¼µÄ¶ÌÐÅÐÅÏ¢")
+    @ApiOperation("ï¿½ï¿½ï¿½Íµï¿½Â¼ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "mobile", value = "ÊÖ»úºÅÂë", required = true, paramType = "query", dataType = "String"),
-            @ApiImplicitParam(name = "source", value = "À´Ô´", required = true, paramType = "query", dataType = "String"),
-            @ApiImplicitParam(name = "deviceId", value = "»úÆ÷Âë", required = true, paramType = "query", dataType = "String"),
+            @ApiImplicitParam(name = "mobile", value = "ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½", required = true, paramType = "query", dataType = "String"),
+            @ApiImplicitParam(name = "source", value = "ï¿½ï¿½Ô´", required = true, paramType = "query", dataType = "String"),
+            @ApiImplicitParam(name = "deviceId", value = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", required = true, paramType = "query", dataType = "String"),
             @ApiImplicitParam(name = "sysToken", value = "sysToken", paramType = "header", required = true, dataType = "String")
     })
     @ParamValidate

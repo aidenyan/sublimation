@@ -8,10 +8,19 @@
     <artifactId>sublimation</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <distributionManagement>
+        <repository>
+            <!--id的名字可以任意取，但是在setting文件中的属性<server>的ID与这里一致-->
+            <id>jimmy</id>
+            <!--指向仓库类型为host(宿主仓库）的储存类型为Release的仓库-->
+            <url>http://localhost:8081/nexus/content/repositories/jimmy/</url>
+        </repository>
+
+    </distributionManagement>
     <modules>
-        <module>validate</module>
-        <module>common</module>
         <module>web-api</module>
+        <module>sublimation-common</module>
+        <module>sublimation-validate</module>
     </modules>
     <dependencyManagement>
         <dependencies>

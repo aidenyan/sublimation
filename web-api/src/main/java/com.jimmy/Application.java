@@ -1,6 +1,6 @@
 package com.jimmy;
 
-import com.jimmy.validate.EnableValidate;
+import com.jimmy.sublimation.validate.EnableValidate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
