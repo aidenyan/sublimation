@@ -4,8 +4,6 @@ import com.jimmy.common.utils.ClassUtils;
 import com.jimmy.validate.anno.Max;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
-
 @Component
 public class MaxRegular implements ValidateRegular<Max> {
 
@@ -15,10 +13,8 @@ public class MaxRegular implements ValidateRegular<Max> {
             return true;
         }
         if (ClassUtils.isNumber(obj)) {
-            if (((Collection) obj).size() == 0) {
-               Double number = ClassUtils.getNumber(obj);
-                return (number < max.max());
-            }
+            Double number = ClassUtils.getNumber(obj);
+            return (number < max.max());
         }
         return false;
     }

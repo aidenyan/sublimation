@@ -4,8 +4,6 @@ import com.jimmy.common.utils.ClassUtils;
 import com.jimmy.validate.anno.Min;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
-
 @Component
 public class MinRegular implements ValidateRegular<Min> {
 
@@ -15,10 +13,8 @@ public class MinRegular implements ValidateRegular<Min> {
             return true;
         }
         if (ClassUtils.isNumber(obj)) {
-            if (((Collection) obj).size() == 0) {
-                Double number = ClassUtils.getNumber(obj);
-                return (number > min.min());
-            }
+            Double number = ClassUtils.getNumber(obj);
+            return (number > min.min());
         }
         return false;
     }
