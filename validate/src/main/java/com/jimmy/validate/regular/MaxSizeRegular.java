@@ -12,7 +12,7 @@ public class MaxSizeRegular implements ValidateRegular<MaxSize> {
     @Override
     public boolean validate(MaxSize maxSize, Object obj) {
         if (obj == null) {
-            return false;
+            return true;
         }
         if (ClassUtils.isArray(obj)) {
             Object[] objArray = (Object[]) obj;
