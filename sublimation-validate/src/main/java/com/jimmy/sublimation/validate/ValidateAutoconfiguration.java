@@ -1,6 +1,6 @@
-package com.jimmy.sublimation.sublimation.validate;
+package com.jimmy.sublimation.validate;
 
-import com.jimmy.sublimation.sublimation.validate.regular.ValidateRegular;
+import com.jimmy.sublimation.validate.regular.ValidateRegular;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

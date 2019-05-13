@@ -1,7 +1,7 @@
-package com.jimmy.sublimation.sublimation.validate.regular;
+package com.jimmy.sublimation.validate.regular;
 
 import com.jimmy.sublimation.sublimation.common.utils.StringUtils;
-import com.jimmy.sublimation.sublimation.validate.exception.ValidateRegularException;
+import com.jimmy.sublimation.validate.exception.ValidateRegularException;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;

@@ -1,8 +1,8 @@
-package com.jimmy.sublimation.sublimation.validate.regular;
+package com.jimmy.sublimation.validate.regular;
 
 import com.jimmy.sublimation.sublimation.common.utils.ClassUtils;
 import com.jimmy.sublimation.sublimation.common.utils.StringUtils;
-import com.jimmy.sublimation.sublimation.validate.anno.NotEmpty;
+import com.jimmy.sublimation.validate.anno.NotEmpty;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;

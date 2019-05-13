@@ -1,7 +1,7 @@
-package com.jimmy.sublimation.sublimation.validate.regular;
+package com.jimmy.sublimation.validate.regular;
 
 import com.jimmy.sublimation.sublimation.common.utils.ClassUtils;
-import com.jimmy.sublimation.sublimation.validate.anno.Min;
+import com.jimmy.sublimation.validate.anno.Min;
 import org.springframework.stereotype.Component;
 
 @Component

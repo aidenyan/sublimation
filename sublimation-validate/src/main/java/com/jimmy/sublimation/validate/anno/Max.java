@@ -1,4 +1,4 @@
-package com.jimmy.sublimation.sublimation.validate.anno;
+package com.jimmy.sublimation.validate.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -11,8 +11,8 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.PARAMETER})
-public @interface Min {
-    double min();
+public @interface Max {
+    double max();
     String group() default "";
     String value() default "";
 }

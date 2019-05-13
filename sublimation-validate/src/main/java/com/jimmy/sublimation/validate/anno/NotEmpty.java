@@ -1,4 +1,4 @@
-package com.jimmy.sublimation.sublimation.validate.anno;
+package com.jimmy.sublimation.validate.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

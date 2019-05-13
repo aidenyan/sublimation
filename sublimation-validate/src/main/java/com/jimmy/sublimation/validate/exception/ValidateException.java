@@ -1,14 +1,14 @@
-package com.jimmy.sublimation.sublimation.validate.exception;
+package com.jimmy.sublimation.validate.exception;
 
-public class ValidateRegularException extends RuntimeException {
+public class ValidateException extends RuntimeException {
     private String message;
 
-    public ValidateRegularException(String message) {
+    public ValidateException(String message) {
         super(message);
         this.message = message;
     }
 
-    public ValidateRegularException(Throwable e, String message) {
+    public ValidateException(Throwable e, String message) {
         super(message, e);
         this.message = message;
     }

@@ -1,6 +1,6 @@
 package com.jimmy.sublimation.dto;
 
-import com.jimmy.sublimation.sublimation.validate.anno.NotNull;
+import com.jimmy.sublimation.validate.anno.NotNull;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
