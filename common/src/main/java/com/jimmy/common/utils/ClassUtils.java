@@ -2,6 +2,7 @@ package com.jimmy.common.utils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.Collection;
 
 public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
@@ -9,13 +10,14 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
     public static boolean isCollection(Object obj) {
         return obj instanceof Collection;
     }
-    public static boolean isArray(Object obj){
-        if(obj==null){
+
+    public static boolean isArray(Object obj) {
+        if (obj == null) {
             return false;
         }
         return obj.getClass().isArray();
-
     }
+
     public static boolean isNumber(Object obj) {
         if (obj == null) {
             return false;
@@ -27,6 +29,18 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
                 || obj instanceof BigDecimal
                 || obj instanceof Long
                 || obj instanceof Integer;
+    }
+
+    public static boolean isBaseClass(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        return isNumber(obj)
+                || obj instanceof Character
+                || obj instanceof Byte
+                || obj instanceof Boolean
+                || obj instanceof String
+                || obj instanceof Short;
     }
 
     public static Double getNumber(Object obj) {
@@ -54,4 +68,10 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
         return obj instanceof String;
     }
 
+
+    public static void main(String[]arg){
+        String[] temp=new String[5];
+        Object[] obj=temp;
+        System.out.println(Arrays.asList(obj).size());
+    }
 }

@@ -1,5 +1,6 @@
 package com.jimmy.dto;
 
+import com.jimmy.validate.anno.NotNull;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -10,6 +11,7 @@ import java.util.Date;
 @Data
 @ApiModel("宝藏基本信息")
 public class TreasureInfoDto {
+    @NotNull(value="asdasdsadsad${fieldName}")
     @ApiModelProperty("宝藏ID")
     private Long id;
     @ApiModelProperty("宝藏名称")

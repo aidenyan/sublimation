@@ -24,7 +24,7 @@ public class MinRegular implements ValidateRegular<Min> {
     }
 
     @Override
-    public String getMessage(Min min, Object obj, String filedName) {
-        return min.value().replace("${filedName}", filedName).replace("${value}", String.valueOf(obj)).replace("${max}", String.valueOf(min.min()));
+    public String getMessage(Min min, Object obj, String fieldName) {
+        return min.value().replace("${fieldName}", fieldName).replace("${value}", String.valueOf(obj)).replace("${max}", String.valueOf(min.min()));
     }
 }

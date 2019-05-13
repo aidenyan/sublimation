@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * @date 2017/3/16
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.PARAMETER})
+@Target({ElementType.FIELD, ElementType.PARAMETER})
 public @interface NotNull {
     String value() default "";
     String group() default "";

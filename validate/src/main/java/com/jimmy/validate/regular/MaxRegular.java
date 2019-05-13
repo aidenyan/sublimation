@@ -24,7 +24,7 @@ public class MaxRegular implements ValidateRegular<Max> {
     }
 
     @Override
-    public String getMessage(Max max, Object obj, String filedName) {
-        return max.value().replace("${filedName}", filedName).replace("${value}", String.valueOf(obj)).replace("${max}", String.valueOf(max.max()));
+    public String getMessage(Max max, Object obj, String fieldName) {
+        return max.value().replace("${fieldName}", fieldName).replace("${value}", String.valueOf(obj)).replace("${max}", String.valueOf(max.max()));
     }
 }

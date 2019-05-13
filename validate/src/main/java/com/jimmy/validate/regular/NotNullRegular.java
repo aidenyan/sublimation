@@ -8,11 +8,11 @@ public class NotNullRegular implements ValidateRegular<NotNull> {
 
     @Override
     public boolean validate(NotNull notNull, Object obj) {
-        return obj == null;
+        return obj != null;
     }
 
     @Override
-    public String getMessage(NotNull notNull, Object obj, String filedName) {
-        return notNull.value().replace("${filedName}", filedName).replace("${value}", String.valueOf(obj));
+    public String getMessage(NotNull notNull, Object obj, String fieldName) {
+        return notNull.value().replace("${fieldName}", fieldName).replace("${value}", String.valueOf(obj));
     }
 }

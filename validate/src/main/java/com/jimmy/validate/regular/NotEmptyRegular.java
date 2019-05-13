@@ -22,13 +22,22 @@ public class NotEmptyRegular implements ValidateRegular<NotEmpty> {
         } else if (ClassUtils.isString(obj)) {
             return StringUtils.isNotBlank((String) obj);
         } else if (ClassUtils.isArray(obj)) {
+            Object[] objectArray = (Object[]) obj;
+            if (objectArray.length == 0) {
+                return false;
+            }
+            for (Object tempObj : objectArray) {
+                if (tempObj != null) {
+                    return true;
+                }
+            }
             return false;
         }
         return true;
     }
 
     @Override
-    public String getMessage(NotEmpty notEmpty, Object obj, String filedName) {
-        return notEmpty.value().replace("${filedName}", filedName).replace("${value}", String.valueOf(obj));
+    public String getMessage(NotEmpty notEmpty, Object obj, String fieldName) {
+        return notEmpty.value().replace("${fieldName}", fieldName).replace("${value}", String.valueOf(obj));
     }
 }
