@@ -18,6 +18,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -75,6 +76,10 @@ public class ParamterValidateAop {
     private void validate(String group, String preFileName, Object obj) throws IllegalAccessException {
         if (obj == null || ClassUtils.isBaseClass(obj)) {
             return;
+        }
+        if (ClassUtils.isArray(obj)) {
+            Object[] objArray = (Object[]) obj;
+            obj = Arrays.asList(objArray);
         }
         if (obj instanceof Collection) {
             int i = 0;
