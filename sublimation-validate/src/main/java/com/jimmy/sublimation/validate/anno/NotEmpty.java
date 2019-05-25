@@ -14,5 +14,5 @@ import java.lang.annotation.Target;
 public @interface NotEmpty {
     //提示语
     String value() default "";
-    String group() default "";
+    String[] groups() default {};
 }

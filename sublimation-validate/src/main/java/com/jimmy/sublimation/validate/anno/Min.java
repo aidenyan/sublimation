@@ -13,6 +13,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 public @interface Min {
     double min();
-    String group() default "";
+    String[] groups() default {};
     String value() default "";
 }

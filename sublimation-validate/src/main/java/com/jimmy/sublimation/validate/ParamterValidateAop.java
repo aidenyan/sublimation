@@ -124,7 +124,7 @@ public class ParamterValidateAop {
         if (validateRegular == null) {
             return;
         }
-        if (StringUtils.isNotBlank(group) && !group.equals(getGroupName(annotation))) {
+        if (!isContain(getGroupName(annotation),group)) {
             return;
         }
 
@@ -143,7 +143,7 @@ public class ParamterValidateAop {
      * @param annotation
      * @return
      */
-    private String getGroupName(Annotation annotation) {
+    private String[] getGroupName(Annotation annotation) {
         try {
             InvocationHandler invocationHandler = Proxy.getInvocationHandler(annotation);
             Field declaredField = invocationHandler.getClass().getDeclaredField("memberValues");
@@ -152,11 +152,22 @@ public class ParamterValidateAop {
             if (memberValues == null) {
                 throw new ValidateRegularException("get proxy is error");
             }
-            return (String) memberValues.get("group");
+            return (String[]) memberValues.get("groups");
         } catch (IllegalAccessException e) {
             throw new ValidateRegularException(e, "get proxy is error");
         } catch (NoSuchFieldException e) {
             throw new ValidateRegularException(e, "get proxy is error");
         }
+    }
+    private boolean isContain(String[] groupArray,String group){
+        if(StringUtils.isBlank(group)){
+            return true;
+        }
+        for(String tempGroup:groupArray){
+            if(group.trim().equals(tempGroup.trim())){
+                return true;
+            }
+        }
+        return false;
     }
 }

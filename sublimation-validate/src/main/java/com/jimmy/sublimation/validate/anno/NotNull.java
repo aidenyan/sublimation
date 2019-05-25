@@ -13,5 +13,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 public @interface NotNull {
     String value() default "";
-    String group() default "";
+
+    String[] groups() default {};
 }
